@@ -1,0 +1,53 @@
+BONUS CHALLENGE FORM
+--------------------
+
+For each bonus challenge you have implemented, please replace the sentence "We are not entitled to this bonus."
+with a short description of:
+
+1. How it was implemented in your code
+2. Where it was used (in which class methods).
+3. How you tested that it is working correctly.
+
+--------------------
+
+1. Fully supporting all configuration fields and avoiding the use of magic numbers
+
+supporting all configurations.
+most of configurations was dependent on boolean therms that we implemented in the code, hardest one was too succeed to do the dealers pause while he place and remove cards,
+also because of the fact that we tried to do the dealers code efficient(** when warn = false mooving timer every sec by 1000ms, when warn = true, mooving timer every 10ms by 10ms)
+we have ran all configurations in all combinations that possibole to ensure that the code running properly.
+--------------------
+
+2. Terminating all threads (that you created) gracefully and in reverse order to the order they were created in.
+We thought that the immediacy of the shutdown if more importent then a little bit of busy wait so to ensure that the code will close properly and fast,
+we used while therm and untill the thread is not dead we pushed him interuptions and notifications. because the fact that its the only thing that can slow
+then down, in addition, we used join to make them finish one by one by order.
+
+--------------------
+
+3. Handling the config.turnTimeoutMillis value as follows:
+config.turnTimeoutMillis < 0: display nothing.
+config.turnTimeoutMillis = 0: display a timer since the last action (reshuffle or set collected).
+Note: in modes without a countdown timer the dealer must ensure there is always at least one legal set on the table.
+
+alot of booleans therms that the right conditions will run while the others not.
+implemented only in the dealers class.
+tested it with running the code.
+
+--------------------
+
+4. Making sure that the threads do not wake up unless some actual job needs to be done (e.g., a value needs to be
+changed on the display, key input needs to be handled, etc.) and the only threads created by you are:
+1 thread per player + 1 additional thread for non-human players.
+
+implemented it in all of 3 kind of threads.
+Easiest one was AI, waiting untill player finishes its freeze and then notified by player thread.
+player thread is notified once by keyboard thread (AWT) and then the player awakes dealer, on secound time the dealer will
+notify him back, after that returns to the first wait.
+on dealer thread, because of the fact that he was running the clock, he only slept for a short time. as mentioned before, to keep 
+the dealer not to do "over work" he was sleeping in the maximal time he could, considering the circumstances.(as mentioned in **)
+this methods delaied the dealers answer to be less immediate but its still less then a secound so i think that delay 
+is not critical at all.
+
+
+I will use the opportunity to compliment your thoughts of doing a work that is not boring, first time i have enjoyed doing homework, thank u for that :)
