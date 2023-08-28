@@ -2,8 +2,8 @@
 
 ## Overview
 
- *  This project is an implementation of the card game "Set," a real-time card game involving pattern recognition. The game contains a deck of 81 cards, each with four features: color, number,   shape, and shading. Players compete to find "legal sets" of three cards that adhere to specific rules regarding these features.
-
+* This project is an implementation of the card game "Set," a real-time card game involving pattern recognition. The game contains a deck of 81 cards, each with four features: color, number, shape, and shading. Players compete to find "legal sets" of three cards that adhere to specific rules regarding these features.
+  
 
 
 ## Game Flow
@@ -16,25 +16,22 @@
 
 ## Game Features
  * ### Cards and Features
-
-  Cards are represented as integers from 0 to 80.
-  Each card has 4 features, each of size 3.
+    Cards are represented as integers from 0 to 80.
+    Each card has 4 features, each of size 3.
 
  * ### The Table
-
-  Holds cards in a 3x4 grid.
-  Keeps track of tokens placed by players.
+    Holds cards in a 3x4 grid.
+    Keeps track of tokens placed by players.
 
 * ### The Players
-
   Supported player types are human and non-human.
   Non-human players are simulated by threads.
   Players control 12 unique keys on the keyboard to place or remove tokens.
 
  * ### The Dealer
-
-  Handles the game flow, card dealing, and point awarding.
-  Ensures fair play through a first-come-first-serve (FIFO) order for checking legal sets.
+    Handles the game flow, card dealing, and point awarding.
+    Ensures fair play through a first-come-first-serve (FIFO) order for checking legal sets.
+  
 ### Legal Set
 A legal set is a set of 3 cards that for each of the four features — color, number, shape, and shading — adhere to one of two conditions:
 
