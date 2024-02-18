@@ -80,4 +80,4 @@ A legal set is a set of 3 cards that for each of the four features — color, nu
 
 * This project was developed as a part of the "System Programming" course at Ben-Gurion University. It serves as a platform to practice concurrent programming in a Java 8 environment, focusing on Java Threads and Java Synchronization.
 #### Disclaimer
-* The User Interface and key control functionalities in this game were not developed by me. These components were provided by the Teaching Assistants of the course. My work is focused on the backend logic, game rules, and multi-threading aspects of the application.
+* The User Interface and key control functionalities in this game were not developed by me. These components were provided by the Teaching Assistants of the course. My work focused on the backend logic, game rules, and multi-threading aspects of the application.
